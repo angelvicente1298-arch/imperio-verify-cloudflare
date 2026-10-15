@@ -1,0 +1,97 @@
+
+# Build outputs
+# Coverage directory used by tools like istanbul
+# Database
+# Dependencies
+# Dependency directories
+# Environment variables
+# Gatsby files
+# IDE and editor files
+# Logs
+# Manus version file (auto-generated, not part of source)
+# Microbundle cache
+# Next.js build output
+# Nuxt.js build / generate output
+# OS generated files
+# Optional REPL history
+# Optional eslint cache
+# Optional npm cache directory
+# Output of 'npm pack'
+# Runtime data
+# Storybook build outputs
+# Temporary folders
+# TypeScript cache
+# Webdev artifacts (checkpoint zips, migrations, etc.)
+# Yarn Integrity file
+# nyc test coverage
+# parcel-bundler cache (https://parceljs.org/)
+**/node_modules
+*.bak
+*.db
+*.dist
+*.lcov
+*.log
+*.pid
+*.pid.lock
+*.seed
+*.sqlite
+*.sqlite3
+*.swo
+*.swp
+*.tgz
+*.tsbuildinfo
+*~
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+.cache
+.cache/
+.env
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
+.eslintcache
+.idea/
+.manus-logs/
+.manus/
+.next
+.node_repl_history
+.npm
+.nuxt
+.nyc_output
+.out
+.parcel-cache
+.pnpm-store/
+.project-config.json
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.storybook-out
+.vscode/
+.webdev/
+.yarn-integrity
+Thumbs.db
+build/
+client/public/__manus__/version.json
+coverage/
+dist/
+ehthumbs.db
+jspm_packages/
+lerna-debug.log*
+logs
+npm-debug.log*
+pids
+pnpm-debug.log*
+temp/
+tmp/
+yarn-debug.log*
+yarn-error.log*
+
+# Secretos locales (nunca se suben)
+.dev.vars
+.dev.vars.*
+!.dev.vars.example

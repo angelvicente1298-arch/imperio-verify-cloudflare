@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1790386923384,
+      "tag": "0000_salty_celestials",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1790401551189,
+      "tag": "0001_bitter_cannonball",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1790401863327,
+      "tag": "0002_curvy_cerebro",
+      "breakpoints": true
+    }
+  ]
+}

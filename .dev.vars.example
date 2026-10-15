@@ -1,0 +1,26 @@
+# Copia este archivo como .dev.vars para probar en tu ordenador.
+# En Cloudflare NO se usa: allí se configuran como secretos (ver README).
+
+# --- Base de datos ---------------------------------------------------------
+# Solo se usa si no hay Hyperdrive (pruebas locales con Node).
+DATABASE_URL="mysql://usuario:clave@host:3306/base"
+
+# --- Discord Developer Portal ----------------------------------------------
+DISCORD_CLIENT_ID=""
+DISCORD_CLIENT_SECRET=""
+DISCORD_BOT_TOKEN=""
+DISCORD_GUILD_ID=""
+DISCORD_VERIFIED_ROLE_ID=""
+DISCORD_EXTRA_ROLE_IDS=""
+DISCORD_ALLOWED_DOMAINS=""
+
+# --- Panel privado ---------------------------------------------------------
+PANEL_USER="imperioshop"
+PANEL_PASSWORD=""
+PANEL_SESSION_SECRET=""
+
+# --- Firma de sesiones -----------------------------------------------------
+JWT_SECRET=""
+
+# --- Opcional: detección de VPN de pago (ipqualityscore.com) ---------------
+IPQUALITYSCORE_API_KEY=""

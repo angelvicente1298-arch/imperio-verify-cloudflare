@@ -1,0 +1,47 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imperio-verify-web",
+  "main": "server/_core/index.ts",
+  "compatibility_date": "2026-10-12",
+  // Node.js dentro de Workers: lo necesitan Express y el conector de MySQL.
+  "compatibility_flags": ["nodejs_compat"],
+  // La web ya construida (Vite la genera en dist/public).
+  "assets": {
+    "directory": "dist/public",
+    "binding": "ASSETS",
+    // Solo la API pasa por el Worker; el resto lo sirve Cloudflare al instante.
+    "run_worker_first": ["/api/*"],
+    // Las rutas de la web (/panel, /bot…) devuelven index.html.
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  },
+
+  // ---------------------------------------------------------------------------
+  // Base de datos (OPCIONAL para publicar)
+  //
+  // El sitio funciona sin base de datos: verifica, entrega el rol y deja entrar
+  // al panel. Lo que se pierde es el historial y el bloqueo de multicuentas por
+  // IP o dispositivo (que necesitan recordar datos entre visitas).
+  //
+  // Para activarla: crea la conexión con
+  //   wrangler hyperdrive create imperio-db --connection-string="mysql://..."
+  // y pega aquí abajo el id que devuelve, quitando las dos barras iniciales:
+  //
+  // "hyperdrive": [
+  //   {
+  //     "binding": "HYPERDRIVE",
+  //     "id": "el-id-que-te-devolvio-el-comando"
+  //   }
+  // ],
+  // ---------------------------------------------------------------------------
+
+  "vars": {
+    "DISCORD_ALLOWED_DOMAINS": "",
+    "VERIFY_MIN_ACCOUNT_DAYS": "5",
+    "VERIFY_MAX_ACCOUNTS_PER_IP": "2",
+    "VERIFY_MAX_ACCOUNTS_PER_DEVICE": "2",
+    "VERIFY_MAX_RISK": "40"
+  }
+}
